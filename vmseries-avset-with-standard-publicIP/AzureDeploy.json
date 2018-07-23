@@ -139,7 +139,7 @@
 		"metadata": {
 			"artifactsBaseUrl": ""
 		},
-		"defaultValue": "https://raw.githubusercontent.com/PaloAltoNetworks/azure/master/vmseries-avset"
+		"defaultValue": "https://raw.githubusercontent.com/yeukb/PaloAltoNetworks/master/vmseries-avset-with-standard-publicIP"
 	},
     "virtualNetworkName": {
       "type": "string",
@@ -227,7 +227,7 @@
         "nicName": "[concat(parameters('vmName'), '-eth')]",
         "FWPrivateIPAddressUntrust": "[parameters('subnet1StartAddress')]",
         "FWPrivateIPAddressTrust": "[parameters('subnet2StartAddress')]",
-        "publicIPAddressType": "Dynamic",
+        "publicIPAddressType": "Static",
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "nsgname-mgmt": "[concat(parameters('vmName'), '-DefaultNSG')]",
         "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
@@ -380,7 +380,7 @@
             "ipConfigurations": [{
                 "name": "[concat('ipconfig', '0')]",
                 "properties": {
-                    "privateIPAllocationMethod": "Dynamic",
+                    "privateIPAllocationMethod": "Static",
                     "publicIPAddress": {
                         "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('fwpublicIPName'))]"
                     },
