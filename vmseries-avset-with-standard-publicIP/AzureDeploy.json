@@ -380,7 +380,7 @@
             "ipConfigurations": [{
                 "name": "[concat('ipconfig', '0')]",
                 "properties": {
-                    "privateIPAllocationMethod": "Static",
+                    "privateIPAllocationMethod": "Dynamic",
                     "publicIPAddress": {
                         "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('fwpublicIPName'))]"
                     },
