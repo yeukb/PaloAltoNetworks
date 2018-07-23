@@ -270,7 +270,7 @@
       "location": "[resourceGroup().location]"
     }, 
     {
-        "apiVersion": "[variables('apiVersion')]",
+        "apiVersion": "2017-08-01",
         "type": "Microsoft.Network/publicIPAddresses",
         "name": "[variables('fwpublicIPName')]",
         "location": "[parameters('location')]",
@@ -365,7 +365,7 @@
             }]
         }
     }, {
-        "apiVersion": "[variables('apiVersion')]",
+        "apiVersion": "2017-08-01",
         "type": "Microsoft.Network/networkInterfaces",
         "name": "[concat(variables('nicName'), '0')]",
         "location": "[parameters('location')]",
