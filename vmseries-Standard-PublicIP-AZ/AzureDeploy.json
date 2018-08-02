@@ -294,6 +294,9 @@
             "[concat('Microsoft.Network/publicIPAddresses/', parameters('publicIPAddressName'))]"
         ],
       "properties": {
+	"networkSecurityGroup": {
+ 	  "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgName'))]"
+        },
         "ipConfigurations": [
           {
             "name": "ipconfig-mgmt",
@@ -303,9 +306,6 @@
               "publicIPAddress": {
                  "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddressName'))]"
               },
-	      "networkSecurityGroup": {
-		"id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgName'))]"
-	      },
               "subnet": {
                 "id": "[variables('subnet0Ref')]"
               }
