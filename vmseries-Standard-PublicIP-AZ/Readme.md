@@ -6,8 +6,9 @@
 - This template supports the deployment of a Palo Alto Networks Firewall in an Availability Zone.  It supports the following features:
 - The firewall deploys with 3 interfaces.  1 MGMT and 2 data plane. 
 - A Standard SKU public IP address is attached to the MGMT interface.
+- A Default NSG is applied to the MGMT interface.
 - Static private IP addresses are assigned to the interfaces based on the input in the starting ip address fields.
-- This template deploys into an existing VNET within the same region.  As a result, the VNET must be created before deploying this template.
+- This template deploys into an existing VNET within the same region.  As a result, the VNET and the subnets must be created before deploying this template.
 - A Managed Disk will be created.
 
         -The following VMs are supported:
@@ -17,10 +18,12 @@
                     -Standard_D4_v2
                     -Standard_DS3_v2
                     -Standard_DS4_v2
+
         -The following VMs Licenses:
              	    -Byol
                     -Bundle1
                     -Bundle2
+
         -The following PAN OS Options:
                     -Latest
                     -8.1.0
