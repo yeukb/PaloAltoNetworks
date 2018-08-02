@@ -303,6 +303,9 @@
               "publicIPAddress": {
                  "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddressName'))]"
               },
+	      "networkSecurityGroup": {
+		"id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgName'))]"
+	      },
               "subnet": {
                 "id": "[variables('subnet0Ref')]"
               }
