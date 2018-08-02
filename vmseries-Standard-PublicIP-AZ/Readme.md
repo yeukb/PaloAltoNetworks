@@ -3,11 +3,11 @@
 [<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fyeukb%2FPaloAltoNetworks%2Fmaster%2Fvmseries-Standard-PublicIP-AZ%2FAzureDeploy.json)
 
 - This template was modified from this template: https://github.com/kytx42/Azure/tree/master/Azure-2FW-Public-LB
-- This template supportis the deployment of a Palo Alto Networks Firewall in an Availability Zone.  It supports the following features:
+- This template supports the deployment of a Palo Alto Networks Firewall in an Availability Zone.  It supports the following features:
 - The firewall deploys with 3 interfaces.  1 MGMT and 2 data plane. 
 - A Standard SKU public IP address is attached to the MGMT interface.
-- Static IP addresses are assigned to the interfaces based on the input in the starting ip address fields.
-- This template deploys into existing VNETs and storage accounts within the same region.  As a result, the storage account and VNET must be created before deploying this template.
+- Static private IP addresses are assigned to the interfaces based on the input in the starting ip address fields.
+- This template deploys into an existing VNET and storage account within the same region.  As a result, the storage account and VNET must be created before deploying this template.
 
         -The following Storage Account types are supported:
                     -Standard_LRS
