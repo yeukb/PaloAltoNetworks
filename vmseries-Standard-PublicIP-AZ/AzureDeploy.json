@@ -71,7 +71,7 @@
        "type": "string",
        "allowedValues": [
           "7.1.1",
-          "8.1.0"
+          "8.1.0",
           "latest"
        ],
        "metadata": {
