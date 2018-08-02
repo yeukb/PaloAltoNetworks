@@ -2,8 +2,8 @@
 
 
 - This template was modified from this template: https://github.com/PaloAltoNetworks/azure/tree/master/vmseries-avset
-- This template attaches a Standard SKU piblic IP to the MGMT interface
-- Other functionalioties remains the same
+- This template attaches a Standard SKU public IP to the MGMT interface
+- Other functionalities remain the same
 - Please refer to the following for other information: https://github.com/PaloAltoNetworks/azure/blob/master/vmseries-avset/README.md
  
 
