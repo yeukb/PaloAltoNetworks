@@ -219,8 +219,7 @@
           "addressPrefix": "[parameters('subnet2Prefix')]"
         }
       }
-    ],
-    "storageAccountId": "[resourceId(parameters('storageAccountExistingRG'),'Microsoft.Storage/StorageAccounts',parameters('storageAccountName'))]"
+    ]
   },
   "resources": [    
     {
@@ -388,10 +387,9 @@
                     "version": "[variables('imageVersion')]"
                 },
                 "osDisk": {
-                    "name": "[concat('osdisk-', parameters('vmName')]",
+                    "name": "[concat('osdisk-', parameters('vmName'))]",
                     "createOption": "FromImage",
-		    "diskSizeGB": 60,
-		    "createOption": "Empty"
+		    "diskSizeGB": 60
                 }
             },
             "networkProfile": {
