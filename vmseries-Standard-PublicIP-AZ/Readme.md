@@ -7,13 +7,9 @@
 - The firewall deploys with 3 interfaces.  1 MGMT and 2 data plane. 
 - A Standard SKU public IP address is attached to the MGMT interface.
 - Static private IP addresses are assigned to the interfaces based on the input in the starting ip address fields.
-- This template deploys into an existing VNET and storage account within the same region.  As a result, the storage account and VNET must be created before deploying this template.
+- This template deploys into an existing VNET within the same region.  As a result, the VNET must be created before deploying this template.
+- A Managed Disk will be created.
 
-        -The following Storage Account types are supported:
-                    -Standard_LRS
-                    -Standard_GRS
-                    -Standard_RAGRS
-                    -Premium_LRS
         -The following VMs are supported:
                     -Standard_D3
                     -Standard_D4

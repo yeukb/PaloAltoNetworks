@@ -39,19 +39,6 @@
        },
        "defaultValue": "VM-FW1"
     },
-    "storageAccountName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the existing storage account used to store the VM's disks"
-      }
-    },
-    "storageAccountExistingRG": {
-       "type": "string",
-       "defaultValue" : "",
-       "metadata": {
-          "description": "Storage Accounts Resource Group location."
-       }
-    },
     "vmSize": {
        "type": "string",
        "allowedValues": [
@@ -401,12 +388,10 @@
                     "version": "[variables('imageVersion')]"
                 },
                 "osDisk": {
-                    "name": "osdisk",
-                    "vhd": {
-                        "uri": "[concat('http://', parameters('storageAccountName'), '.blob.core.windows.net/vhds/', parameters('vmName'), '-', variables('imageOffer'), '-', variables('imageSku'), '.vhd')]"
-                    },
-                    "caching": "ReadWrite",
-                    "createOption": "FromImage"
+                    "name": "[concat('osdisk-', parameters('vmName')]",
+                    "createOption": "FromImage",
+		    "diskSizeGB": 60,
+		    "createOption": "Empty"
                 }
             },
             "networkProfile": {
