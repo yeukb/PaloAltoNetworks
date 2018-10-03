@@ -1,0 +1,1 @@
+This Terraform template deploys two Palo Alto Networks VM-Series Firewalls with a Standard Azure internal load-balancer, and an Ubuntu test VM, as shown in figure 1 below. It allows the user to demo Azure egress security using Palo Alto Networks VM-Series firewalls.
